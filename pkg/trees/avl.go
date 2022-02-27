@@ -1,5 +1,6 @@
 package trees
 
+// AVLTree is a struct that represent a balanced binary tree
 type AVLTree struct {
 	Root *Node
 }

@@ -2,6 +2,7 @@ package trees
 
 import "fmt"
 
+// Heap is a struct that representing a binary heap data structure
 type Heap struct {
 	Storage []int
 	Size int `default:"0"`

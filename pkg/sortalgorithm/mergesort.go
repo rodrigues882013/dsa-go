@@ -50,6 +50,7 @@ func mergeSort(arr []int, lowerBound int, upperBound int, aux []int) {
 
 }
 
+// MergeSort is an implementation from the classical stable sort algorithm
 func MergeSort(arr []int) {
 	aux := make([]int, len(arr))
 	mergeSort(arr, 0, len(arr) - 1, aux)

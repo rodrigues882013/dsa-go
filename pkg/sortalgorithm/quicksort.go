@@ -39,6 +39,7 @@ func quickSort(arr []int, lowerBound int, upperBound int) {
 	}
 }
 
+// QuickSort is an implementation from the classical stable sort algorithm
 func QuickSort(arr []int) {
 	quickSort(arr, 0, len(arr) - 1)
 }

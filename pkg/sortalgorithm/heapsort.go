@@ -1,5 +1,0 @@
-package sortalgorithm
-
-func main() {
-
-}

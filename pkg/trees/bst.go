@@ -1,5 +1,6 @@
 package trees
 
+// BSTree is a struct that represent a unbalanced binary tree
 type BSTree struct {
 	Root *Node
 }

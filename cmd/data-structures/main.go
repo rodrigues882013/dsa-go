@@ -1,17 +1,15 @@
 package main
 
 import (
-	"data-structures/pkg/sortalgorithm"
+	"data-structures/pkg/dynamicprogramming"
 	"fmt"
 )
 
-func te(arr *[]int) {
-	(*arr)[1] = 10
-}
-
 func main() {
-	arr := []int{7, 6, 10, 5, 9, 2, 1, 15, 7}
-	sortalgorithm.QuickSort(arr)
-	fmt.Println(arr)
+	profits := []int{1, 6, 10, 16}
+	weights := []int{1, 2, 3, 5}
+
+	fmt.Println(dynamicprogramming.Knapsack(profits, weights, 7))
+	fmt.Println(dynamicprogramming.Knapsack(profits, weights, 6))
 
 }
