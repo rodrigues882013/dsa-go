@@ -65,13 +65,5 @@ func Knapsack(profits []int, weights []int, capacity int) int {
 
 // KnapsackWithTabulation calculate the maximum profit using tabulation, it is a bottom-up approach
 func KnapsackWithTabulation(profits []int, weights []int, capacity int) int {
-	dp := utils.Make2dArray(len(weights), capacity + 1)
-
-	for i := 0; i < len(weights); i++ {
-		for c := 0; c < capacity; c++ {
-			dp[i][c] = utils.Max (dp[i-1][c], profits[i] + dp[i-1][c-weights[i]])
-		}
-	}
-
-	return dp[len(weights)][capacity]
+	panic("implementing me")
 }
