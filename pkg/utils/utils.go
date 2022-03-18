@@ -48,3 +48,27 @@ func Make2dArray(m, n int) [][]int {
 	return matrix
 }
 
+/*
+func abs(value int) int {
+    if (value < 0) {
+        return (-1) * value
+    }
+
+    return value
+}
+
+func min(a, b int) int {
+	if a < b {
+		return a
+	}
+	return b
+}
+
+func max(a, b int) int {
+	if a > b {
+		return a
+	}
+	return b
+}
+
+*/

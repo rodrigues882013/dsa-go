@@ -1,5 +1,12 @@
 package graph
 
+import (
+	"container/heap"
+	"data-structures/pkg/linears"
+	"data-structures/pkg/utils"
+	"math"
+)
+
 // Edge is a struct representing a edge with its respective incoming node and its weight
 type Edge struct {
 	Id int
@@ -59,7 +66,42 @@ func (g *LGraph) DFS(start int) []int {
 }
 
 func (g *LGraph) Dijkstra(start int) []int {
-	panic("implement me")
+	numberOfVertices := len(g.Storage)
+	visited := make([]bool, numberOfVertices)
+	dist := make([]int, numberOfVertices)
+	utils.Fill(dist, numberOfVertices, math.MaxInt)
+	dist[0] = 0
+	pq := make(linears.PriorityQueue, 1)
+
+	pq.Push(&linears.Item{
+		Value:    start,
+		Priority: 0,
+	})
+	heap.Init(&pq)
+
+	for pq.Len() > 0 {
+		popped := pq.Pop().(*linears.Item)
+		visited[popped.Value] = true
+
+		for _, edge := range g.Storage[popped.Value] {
+
+			if visited[edge.Id] {
+				continue
+			}
+
+			newDistance := dist[popped.Value] + edge.Weight
+
+			if newDistance < dist[edge.Id] {
+				dist[edge.Id] = newDistance
+				pq.Push(&linears.Item{
+					Value: edge.Id,
+					Priority: newDistance,
+				})
+			}
+		}
+	}
+
+	return dist
 }
 
 func (g *LGraph) TopSort() []int {
