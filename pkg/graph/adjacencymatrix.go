@@ -10,7 +10,7 @@ type MGraph struct {
 }
 
 func (M *MGraph) BFS(start int) []int {
-	panic("implement me")
+	panic(any("implement me"))
 }
 
 // DFS return the path from a start point to all reachable vertices from the graph using depth-first approach
@@ -37,11 +37,11 @@ func (M *MGraph) DFS(start int) []int {
 }
 
 func (M *MGraph) Dijkstra(start int) []int {
-	panic("implement me")
+	panic(any("implement me"))
 }
 
 func (M *MGraph) TopSort() []int {
-	panic("implement me")
+	panic(any("implement me"))
 }
 
 // AddVertices adding a set o vertices in a graph
@@ -73,7 +73,7 @@ func (M *MGraph) AddVertex(vertex int) {
 // AddEdges connect to vertices in an already created graph
 func (M *MGraph) AddEdges(edges [][]int) {
 	if M.Storage == nil {
-		panic("There is no vertices")
+		panic(any("There is no vertices"))
 	}
 
 	for _, edge := range edges {

@@ -4,6 +4,7 @@ import (
 	"container/heap"
 	"data-structures/pkg/linears"
 	"data-structures/pkg/utils"
+	"log"
 	"math"
 )
 
@@ -105,7 +106,8 @@ func (g *LGraph) Dijkstra(start int) []int {
 }
 
 func (g *LGraph) TopSort() []int {
-	panic("implement me")
+	log.Fatal("implement me")
+	return nil
 }
 
 // AddVertices adding a set o vertices in a graph
@@ -127,7 +129,8 @@ func (g *LGraph) AddVertex(vertex int) {
 func (g *LGraph) AddEdges(edges [][]int) {
 
 	if g.Storage == nil {
-		panic("There is no vertices")
+		log.Fatal("implement me")
+		return
 	}
 
 	for _, edge := range edges {

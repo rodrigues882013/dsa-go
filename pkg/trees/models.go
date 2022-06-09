@@ -15,4 +15,10 @@ type (
 		Search(n *Node, value int) bool
 		Insert(value int)
 	}
+
+	// TrieNode is an struct holding the trie (or prefix tree) data
+	TrieNode struct {
+		Children map[rune]*TrieNode
+		IsEnd bool
+	}
 )
