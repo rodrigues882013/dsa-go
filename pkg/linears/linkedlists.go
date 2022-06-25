@@ -1,7 +1,7 @@
 package linears
 
 type Node struct {
-	Val int
+	Val TreeNode
 	Key int
 	Next *Node
 	Prev *Node
